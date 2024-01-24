@@ -1,0 +1,25 @@
+# Node modules
+node_modules/
+
+# Cypress
+cypress/screenshots/
+cypress/videos/
+
+# Output of test results
+results/
+
+# Environment variables
+.env
+
+# Log files
+*.log
+
+# Output of npm or yarn
+package-lock.json
+yarn-error.log
+
+# OS related
+.DS_Store
+
+# Visual Studio Code
+.vscode/
