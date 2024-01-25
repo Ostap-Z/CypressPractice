@@ -37,7 +37,7 @@ You should follow GIT flow policy as much as possible.
 * Follow the following commit messages convention:
   * Start a `Subject` with the upper letter.
   * Use an imperative mood for the `Subject`.
-  * Include a jira issue into a `Subject` (i.e. [CYP-123] My commit message).
+  * Include a jira issue into a `Subject` (i.e. `[CYP-123] My commit message`).
   * Limit a `Subject` to the 50 symbols.
   * Do not end a `Subject` with a period.
   * Use a line break between `Subject` and `Body`.
@@ -56,3 +56,21 @@ The main points of the GitFlow branching model are:
   (*release* branches can acutally be merged to *develop* continously).
 * If an issue in *main* is detected, a *hotfix* branch is created from *main*.
 * Once the *hotfix* is complete it is merged to both *develop* and *main*.
+
+## Lint Rules
+The following linting rules are currently in place. On save, if the rules can be auto-fixed, it will do so in the file. 
+Also, we can run the command `npm run lint` to scan the entire project for errors and warnings.
+
+It is also suggested to download the ESLint VSCode plugin, as it will provide highlighting during development. 
+Extension ID: dbaeumer.vscode-eslint
+
+* Indentions - Enforces use of 2 spaces vs tabs.
+* Line breaks - Enforces Unix style line breaks.
+* Quotes - Enforces use of single quotes.
+* Semi - Enforces use of semicolons at the end of lines.
+* Space Before Function Parentheses - Enforces a space after the function name before the parentheses: `function foo () { }`.
+* No Unused Variables - Enforces that all variables must be used if included in a file.
+* Max Classes per File - Enforces a maximum of 3 classes per file.
+* Max Length - Enforces a maximum length of code - 79, comments - 72 and ignores this rule for the URL, template and regex literals.
+* No Multiple Empty Lines - Enforces use of maximum 2 empty lines inside a code, 0 on the beginning and ending of a file.
+* End Of Line Last - Enforces use of an empty line inside a file.

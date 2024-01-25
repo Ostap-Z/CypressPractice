@@ -1,0 +1,23 @@
+{
+  "name": "cypress-practice",
+  "version": "1.0.0",
+  "description": "Pet project",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ostap-Z/CypressPractice"
+  },
+  "author": "OstapZ",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ostap-Z/CypressPractice/issues"
+  },
+  "homepage": "https://github.com/Ostap-Z/CypressPractice#readme",
+  "scripts": {
+    "lint": "eslint . --ext .js"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-plugin-cypress": "^2.15.1"
+  }
+}
