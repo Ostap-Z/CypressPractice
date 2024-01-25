@@ -14,10 +14,23 @@
   },
   "homepage": "https://github.com/Ostap-Z/CypressPractice#readme",
   "scripts": {
+    "cy:open": "cypress open",
+    "cy:run:chrome": "cypress run --browser=chrome",
+    "cy:run:webkit": "cypress run --browser=webkit",
     "lint": "eslint . --ext .js"
   },
   "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.1",
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "cypress": "^13.6.3",
     "eslint": "^8.56.0",
     "eslint-plugin-cypress": "^2.15.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "filterSpecs": true,
+    "omitFiltered": true,
+    "stepDefinitions": [
+      "**/[filepath].feature/../*.steps.js"
+    ]
   }
 }
