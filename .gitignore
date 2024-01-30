@@ -23,3 +23,7 @@ yarn-error.log
 
 # Visual Studio Code
 .vscode/
+
+# Debug files
+debug.js
+debug.py
