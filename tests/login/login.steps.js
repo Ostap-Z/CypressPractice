@@ -33,8 +33,7 @@ Given('I create a user via API', () => {
     user = User.create({
       EMAIL: response.body.user.email,
       USERNAME: response.body.user.username,
-      PASSWORD: password,
-      TOKEN: response.body.user.token
+      PASSWORD: password
     });
   });
 });
@@ -43,12 +42,10 @@ When('I perform login with a previous created user', () => {
   loginPage.login(user.EMAIL, user.PASSWORD);
 });
 
-When('I perform log in with an invalid email', () => {
-  loginPage.login(generateEmail(), user.PASSWORD);
-});
-
-When('I perform log in with an invalid password', () => {
-  loginPage.login(user.EMAIL, generatePassword());
+When('I perform log in with an invalid {string}', (credentialField) => {
+  credentialField === 'email'
+    ? loginPage.login(generateEmail(), user.PASSWORD)
+    : loginPage.login(user.EMAIL, generatePassword());
 });
 
 Then('I should see I am logged in', () => {
