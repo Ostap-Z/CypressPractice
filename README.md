@@ -173,9 +173,14 @@ npm run cy:open
 ```
 
 ## Examples
-Run a whole test suite:
+Run a whole test suite in the `Chrome` browser:
 ```
-npm run cy:run:chrome -- -s "tests/examples/example.feature"
+npm run cy:run:chrome -- -s "tests/login/login.feature"
+```
+
+Run a whole test suite in the `Webkit` browser:
+```
+npm run cy:run:webkit -- -s "tests/login/login.feature"
 ```
 
 # Making Tests
