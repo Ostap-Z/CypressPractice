@@ -1,6 +1,6 @@
 {
   "name": "cypress-practice",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Pet project",
   "main": "index.js",
   "repository": {
@@ -22,7 +22,9 @@
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^20.0.1",
     "@cypress/browserify-preprocessor": "^3.0.2",
+    "@faker-js/faker": "^8.4.0",
     "cypress": "^13.6.3",
+    "dataclass": "^2.1.1",
     "eslint": "^8.56.0",
     "eslint-plugin-cypress": "^2.15.1",
     "playwright-webkit": "1.34"

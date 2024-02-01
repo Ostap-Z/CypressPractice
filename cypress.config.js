@@ -25,9 +25,13 @@ module.exports = defineConfig({
   video: true,
   videosFolder: 'cypress/videos',
 
+  env: {
+    conduitUiUrl: 'https://conduit.realworld.how/',
+    conduitApiUrl: 'https://api.realworld.io/api/'
+  },
+
   e2e: {
-    // TODO: replace it with the SUT url in future PRs
-    baseUrl: 'https://example.cypress.io',
+    baseUrl: 'https://conduit.realworld.how/',
     specPattern: [
       'tests/**/*cy.js',
       'tests/**/*.feature'
