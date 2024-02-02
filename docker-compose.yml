@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  conduit:
+    build: .
+    entrypoint:
+      - "npx"
+      - "cypress"
+      - "run"
+    command:
+      - "npx"
+      - "cypress"
+      - "run"
+      - "--browser"
+      - "chrome"
+    volumes:
+      - .:/conduit
