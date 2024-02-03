@@ -166,6 +166,19 @@ This will override default cypress arguments set in the `docker-compose.yml` fil
 docker compose run conduit cypress run --spec tests/registration/registration.feature --browser firefox
 ```
 
+## Docker Build and Run
+You can build and run a container manually to be able to develop tests inside a Docker container
+
+1. Build a Docker image from the `Dockerfile` located in the current directory (.) and tags (-t) the image with your custom image name:
+```
+docker build . -t <image_name>
+``` 
+
+2. Run a Docker container based on the Docker image and attach your terminal (-t) to it in the interactive mode (-i):
+```
+docker run -it <image_name>
+```
+
 
 # Setup Test Framework
 Prior to running any tests in the Cypress Test Runner or in the headless execution mode you will need to set a few things up:
