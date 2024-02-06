@@ -7,10 +7,6 @@ services:
       - "npx"
       - "cypress"
       - "run"
-    command:
-      - "npx"
-      - "cypress"
-      - "run"
       - "--browser"
       - "chrome"
     volumes:
