@@ -151,6 +151,12 @@ load_nvm > /dev/stderr
 # Docker Setup
 You can run tests easily in docker containers. Install docker [here](https://docs.docker.com/engine/install/) before dive deep.
 
+It is also suggested to download the `Docker` and `Remote Development` VSCode plugins, as it will help you to build, manage, develop and deploy containerized applications from VSCode.
+
+Docker Extension ID: `ms-azuretools.vscode-docker`
+
+Remote Development Extension ID: `ms-vscode-remote.vscode-remote-extensionpack`
+
 ## Docker Compose
 Execute `docker compose up` command within the `root` directory of a project to configure container and run tests there.
 
@@ -163,11 +169,11 @@ You can change default cypress behavior defined in the `docker-compose.yml` file
 
 This will override default cypress arguments set in the `docker-compose.yml` file, pass your custom arguments to cypress and run the `registration` cypress tests in the `firefox` browser:
 ```
-docker compose run conduit cypress run --spec tests/registration/registration.feature --browser firefox
+docker compose run conduit --spec tests/registration/registration.feature --browser firefox
 ```
 
 ## Docker Build and Run
-You can build and run a container manually to be able to develop tests inside a Docker container
+You can build and run a container manually to be able to develop tests inside a Docker container.
 
 1. Build a Docker image from the `Dockerfile` located in the current directory (.) and tags (-t) the image with your custom image name:
 ```
